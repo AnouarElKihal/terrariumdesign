@@ -1,0 +1,531 @@
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'Aquire';
+    src: url(./AquireLight-YzE0o.otf);
+}
+
+nav {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    height: fit-content;
+    width: 100%;
+    box-shadow: 0 8px 20px rgb(11, 83, 65);
+    background-color: rgb(11, 83, 65);
+}
+
+label.logo a {
+    color: white;
+    font-size: 25px;
+    line-height: 80px;
+    font-weight: bold;
+    font-family: 'Aquire';
+    text-decoration: none;
+}
+
+label.logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+label.logo img {
+    width: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    mix-blend-mode: color-dodge;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: rgb(11, 112, 87);
+    transition: .5s;
+}
+
+label.logo a:hover {
+    background-color: rgb(11, 83, 65);
+    transition: 0s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#homePage {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#homePage video {
+    opacity: 0.8;
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+    z-index: -1; 
+}
+
+#homePage img {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.firstText, .secondText {
+    animation: fadein 5s;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.firstText {
+    font-size: 55px;
+    text-transform: uppercase;
+}
+
+.title {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(2, 129, 97);
+    padding-top: 100px;
+}
+
+#chisonoPage {
+    height: fit-content;
+    width: 100%;
+}
+
+.chisonoSection, .terrarioSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 100px;
+}
+
+.animation-text.animate {
+    animation: fadein 5s;
+}
+
+#terrarioPage {
+    height: fit-content;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.terrarioSection {
+    flex-direction: row;
+}
+
+#terrarioImg {
+    height: 400px;
+    width: 450px;
+    border: none;
+}
+
+.terrarioSection p {
+    margin-left: 100px;
+}
+
+#prodottiPage {
+    height: fit-content;
+    width: 100%;
+}
+
+.prodottiSection {
+    height: fit-content;
+	font-size: 16px;
+	margin:0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    padding: 50px;
+    flex-direction: row;
+}
+
+img{
+	max-width: 100%;
+}
+
+.ui-card{
+	width: 300px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease-out;
+	background:radial-gradient(#111 50%, #000 100%);
+    margin: 25px;
+}
+
+.ui-card img {
+	transform: scale(1.3);
+	transition: all 0.3s ease-out;
+    height: 450px;
+    width: 280px;
+}
+
+.ui-card:hover img {
+	transform: scale(1.1) translateY(-20px); 
+	opacity: 0.3
+}
+
+.ui-card .description {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}
+
+.ui-card .description h3 {
+	font-weight: 700;
+	font-size: 32px;
+	margin: 0 0 20px;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out;
+
+}
+
+.ui-card .description p {
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.2s;
+}
+
+.ui-card:hover .description h3 {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.ui-card:hover .description p {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.sdpSection {
+    height: fit-content;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn {
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 13px;
+    background-color: rgb(2, 129, 97);
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#btn:hover {
+    opacity: 0.8;
+}
+
+#btn:active {
+    background-color: rgb(8, 74, 57)
+}
+
+#contattiPage {
+    line-height: 1.5;
+    height: fit-content;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(./galleria/immagini/sfondo.png);
+}
+
+.contact-bg {
+    height: fit-content;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-bg h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 10px;
+    letter-spacing: 4px;
+    margin-top: 120px;
+}
+
+.contact-bg p {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.line div {
+    margin: 0 0.2rem;
+}
+
+.line div:nth-child(1), .line div:nth-child(3) {
+    height: 3px;
+    width: 70px;
+    background-color: rgb(11, 83, 65);
+    border-radius: 5px;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+}
+
+.line div:nth-child(2) {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(11, 83, 65);
+    border-radius: 50%;
+}
+
+.text {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.contact-bg .text {
+    margin: 1.6rem 0;
+}
+
+.contact-body {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.contact-info {
+    text-align: center;
+    padding: 2rem 0;
+    color: #fff;
+}
+
+.contact-info span {
+    display: block;
+}
+
+.contact-info div {
+    margin: 0.8rem 0;
+    padding: 1rem;
+}
+
+.contact-info span .fa-solid, .contact-info span .fa-brands {
+    font-size: 2rem;
+    padding-bottom: 0.9rem;
+    color: white;
+}
+
+.contact-info div span:nth-child(2) {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.instaLink {
+    text-decoration: none;
+    color: #fff;
+}
+
+.instaLink:hover {
+    opacity: 0.7;
+}
+
+.instaLink:active {
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 1200px) {
+    .contact-info {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1055px) {
+    label.logo a {
+        font-size: 20px;
+    }
+    nav ul li a {
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contact-bg .text {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .terrarioSection {
+        flex-direction: column;
+    }
+    .terrarioSection p {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .prodottiSection {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(11, 83, 65);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover, a.active {
+        background: none;
+        color: white;
+    }
+    #check:checked ~ ul {
+        left: 0%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact-bg .text {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #terrarioImg {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    label.logo a {
+        font-size: 17px;
+    }
+}
+
+@media screen and  (max-width: 386px) {
+    label.logo a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    label.logo a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    label.logo a {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #emailSpan {
+        font-size: 13px;
+    }
+}
+
+
+
+
